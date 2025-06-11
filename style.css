@@ -18,6 +18,26 @@ header {
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(to right, #d4a71f, #e4ab00);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
 header .topo {
   display: flex;
@@ -32,7 +52,6 @@ header .esquerda {
   gap: 20px;
 }
 
-
 .logo {
   width: 120px;
   height: 120px;
@@ -45,7 +64,6 @@ h1 {
   font-weight: 800;
   color: #222;
 }
-
 
 nav.menu {
   display: flex;
@@ -98,24 +116,28 @@ section h2 {
   margin-bottom: 20px;
 }
 
+/* Cards em grid de 2 colunas */
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 32px;
   justify-content: center;
 }
 
+/* Card padrão */
 .card {
   background-color: #fff8e1;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  width: 260px;
+  width: 380px; /* mais largo */
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   transition: transform 0.3s;
+  margin-bottom: 0;
 }
 
 .card:hover {
@@ -125,6 +147,44 @@ section h2 {
 .card span {
   font-size: 40px;
   margin-bottom: 15px;
+}
+
+/* Cards de modalidades (histórico) */
+.card p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  margin: 8px 0;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.card .turma {
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.card .instagram {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  color: #888;
+  text-decoration: underline;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Responsivo: empilha os cards em telas pequenas */
+@media (max-width: 900px) {
+  .card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .cards {
+    gap: 20px;
+  }
 }
 
 ul {
@@ -141,7 +201,6 @@ ul {
   padding: 40px 20px;
   max-height: 100vh;
 }
-
 
 .footer-col {
   flex: 1;
@@ -164,97 +223,187 @@ ul {
 .footer-col.right {
   text-align: right;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+header .topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+header .esquerda {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 40px 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 h1 {
   font-size: 48px;
   font-weight: 800;
-  text-align: center;
   color: #222;
-  margin-bottom: 40px;
 }
 
-.grupo-turmas {
-  margin-bottom: 60px;
+nav.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+nav.menu a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: #222;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+nav.menu a:hover {
+  background-color: #fff3cd;
+}
+
+main {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 60px 20px;
+  gap: 80px;
 }
 
-.titulo-curso {
-  font-size: 32px;
-  font-weight: 700;
+section {
+  background-color: white;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section h2 {
+  font-size: 36px;
   color: #e4ab00;
   border-bottom: 3px solid #e4ab00;
   padding-bottom: 10px;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
-.turmas-container {
+/* Cards em grid de 2 colunas */
+.cards {
   display: flex;
   flex-wrap: wrap;
+  gap: 32px;
   justify-content: center;
-  gap: 30px;
 }
 
-.turma {
+/* Card padrão */
+.card {
   background-color: #fff8e1;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  width: 260px;
+  width: 380px; /* mais largo */
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   transition: transform 0.3s;
+  margin-bottom: 0;
 }
 
-.turma:hover {
-  transform: translateY(-10px);
+.card:hover {
+  transform: translateY(-15px);
 }
 
-.simbolo {
+.card span {
   font-size: 40px;
   margin-bottom: 15px;
 }
 
-.turma h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #222;
+/* Cards de modalidades (histórico) */
+.card p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  margin: 8px 0;
+  font-size: 1.1rem;
+  width: 100%;
 }
 
-.turma p {
-  font-size: 16px;
-  margin-top: 8px;
+.card .turma {
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
-.informatica {
-  border-top: 5px solid #d4a71f;
+.card .instagram {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  color: #888;
+  text-decoration: underline;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
-.eletro {
-  border-top: 5px solid #e4ab00;
+/* Responsivo: empilha os cards em telas pequenas */
+@media (max-width: 900px) {
+  .card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .cards {
+    gap: 20px;
+  }
 }
 
-.ano {
-  font-weight: bold;
-  color: #555;
+ul {
+  padding-left: 25px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%; 
+  background-color: #e4ab00;
+  padding: 40px 20px;
+  max-height: 100vh;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  padding: 0 20px;
+}
+
+.footer-col p {
+  margin: 6px 0;
+}
+
+.footer-col.left {
+  text-align: left;
+}
+
+.footer-col.center {
+  text-align: center;
+}
+
+.footer-col.right {
+  text-align: right;
 }
