@@ -116,7 +116,7 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* Cards em grid de 2 colunas */
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -124,13 +124,13 @@ section h2 {
   justify-content: center;
 }
 
-/* Card padrão */
+
 .card {
   background-color: #fff8e1;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  width: 380px; /* mais largo */
+  width: 380px; 
   min-height: 220px;
   display: flex;
   flex-direction: column;
@@ -149,7 +149,7 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* Cards de modalidades (histórico) */
+
 .card p {
   display: flex;
   align-items: center;
@@ -175,7 +175,6 @@ section h2 {
   white-space: nowrap;
 }
 
-/* Responsivo: empilha os cards em telas pequenas */
 @media (max-width: 900px) {
   .card {
     width: 100%;
@@ -300,7 +299,7 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* Cards em grid de 2 colunas */
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -308,13 +307,13 @@ section h2 {
   justify-content: center;
 }
 
-/* Card padrão */
+
 .card {
   background-color: #fff8e1;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  width: 380px; /* mais largo */
+  width: 380px; 
   min-height: 220px;
   display: flex;
   flex-direction: column;
@@ -333,7 +332,7 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* Cards de modalidades (histórico) */
+
 .card p {
   display: flex;
   align-items: center;
@@ -357,9 +356,7 @@ section h2 {
   text-decoration: underline;
   font-weight: 400;
   white-space: nowrap;
-}
 
-/* Responsivo: empilha os cards em telas pequenas */
 @media (max-width: 900px) {
   .card {
     width: 100%;
@@ -407,3 +404,102 @@ ul {
 .footer-col.right {
   text-align: right;
 }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.grupo-turmas {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-curso {
+  font-size: 32px;
+  font-weight: 700;
+  color: #e4ab00;
+  border-bottom: 3px solid #e4ab00;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.turmas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.turma {
+  background-color: #fff8e1;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.turma:hover {
+  transform: translateY(-10px);
+}
+
+.turma h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.turma p {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.informatica {
+  border-top: 5px solid #d4a71f;
+}
+
+.eletro {
+  border-top: 5px solid #e4ab00;
+}
+
+.ano {
+  font-weight: bold;
+  color: #555;
+}
+
+.simbolo {
+  font-size: 40px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.simbolo:hover {
+  transform: scale(1.2);
+}
+
+
