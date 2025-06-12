@@ -416,6 +416,43 @@ body {
   padding: 40px 20px;
 }
 
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.galeria-titulo {
+  text-align: center;
+  padding: 40px 20px 20px;
+  border-bottom: 5px solid #e4ab00;
+  margin: 0 auto 40px;
+  max-width: 800px;
+}
+
+.galeria-titulo h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #222;
+  margin: 0;
+}
+
+.titulo-pagina {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo-pagina h1 {
+  font-size: 2em;
+  color: #000;
+  font-weight: bold;
+}
+
 h1 {
   font-size: 48px;
   font-weight: 800;
@@ -501,5 +538,68 @@ h1 {
 .simbolo:hover {
   transform: scale(1.2);
 }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.galeria-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.foto {
+  background-color: #fff8e1;
+  border-top: 5px solid #e4ab00;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.foto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #e4ab00;
+}
+
+.descricao {
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  min-height: 60px;
+}
+
+
+
 
 
